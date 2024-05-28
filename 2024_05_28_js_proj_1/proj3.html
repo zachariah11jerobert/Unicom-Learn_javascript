@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Product" id="txtProduct">
+        <input type="number" placeholder="price" id="txtPrice">
+        <input type="number" placeholder="qty" id="txtQty">
+        <button onclick="calculate()">Add</button>
+
+        <span id="displaySubTotal"></span>
+    </div>
+
+    <div>
+        <table border="1" id="tblDisplay">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Apple</td>
+                    <td>100</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Refer the elements
+        const txtProduct = document.getElementById("txtProduct");
+        const txtPrice = document.getElementById("txtPrice");
+        const txtQty = document.getElementById("txtQty");
+        const elemDisplaySubTotal = document.getElementById("displaySubTotal");
+
+
+        const product = ["Apple", "Orange", "Banana"];
+        const productPrice = [100, 80, 40];
+        const productQty = [5, 10, 10];
+
+        function calculate() {
+            let price = Number(txtPrice.value);
+            let qty = Number(txtQty.value);
+            let subTotal = price * qty;
+            elemDisplaySubTotal.innerHTML = `Sub Total is : ${subTotal}`;
+        }
+
+
+        function displayProducts() {
+            const tblDisplay = document.querySelector("#tblDisplay tbody");
+            
+            let trStr = `<tr>
+                    <td>Apple</td>
+                    <td>100</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>100</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>100</td>
+                    <td>5</td>
+                </tr>
+                `;
+
+            tblDisplay.innerHTML = trStr;
+
+            console.log(tblDisplay);
+        }
+
+        displayProducts();
+    </script>
+</body>
+
+</html>

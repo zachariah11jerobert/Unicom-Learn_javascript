@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color: yellow;width:500px;height:200px;border: 3px solid red;" id="elemDisplay">
+
+    </div>
+
+
+    <script>
+        // String interpolation
+        let name = "Kumar";
+        const elemDisplay = document.getElementById("elemDisplay");
+        console.log(elemDisplay);
+
+        const elemH1 = document.createElement("h1");
+        console.log(elemH1);
+
+        elemH1.innerText = "Hello world 1";
+        console.log(elemH1);
+
+        const elemH2 = document.createElement("h2");
+        elemH2.innerText="Hello world 2";
+        console.log(elemH2);
+
+        //elemDisplay.innerHTML=elemH1;
+        elemDisplay.appendChild(elemH1);
+        elemDisplay.appendChild(elemH2);
+
+    </script>
+</body>
+
+</html>

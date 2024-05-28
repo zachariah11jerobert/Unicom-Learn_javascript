@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Product" id="txtProduct">
+        <input type="number" placeholder="price" id="txtPrice">
+        <input type="number" placeholder="qty" id="txtQty">
+        <button onclick="calculate()">Add</button>
+    </div>
+
+
+    <script>
+        function calculate() {
+
+            // Refer the elements
+            const txtProduct = document.getElementById("txtProduct");
+            const txtPrice = document.getElementById("txtPrice");
+            const txtQty = document.getElementById("txtQty");
+
+            let price = Number(txtPrice.value);
+            let qty = Number(txtQty.value);
+
+            console.log(typeof txtProduct);
+            console.log(typeof price)
+            console.log(qty);
+
+            let subTotal = price * qty;
+            alert(subTotal);
+            // alert("hi");
+        }
+    </script>
+</body>
+
+</html>

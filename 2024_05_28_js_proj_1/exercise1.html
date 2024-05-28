@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox" id="chkCricket" value="cricket" class="chkGames">
+        <label for="chkCricket">Cricket</label>
+    </div>
+    <div>
+        <input type="checkbox" id="chkFootball" value="footBall" class="chkGames">
+        <label for="chkFootball">Football</label>
+    </div>
+    <div>
+        <input type="checkbox" id="chkBasketBall" value="basketBall" class="chkGames">
+        <label for="chkBasketBall">Basket Ball</label>
+    </div>
+    <div>
+        <input type="checkbox" id="chkHockey" value="hockey" class="chkGames">
+        <label for="chkHockey">Hockey</label>
+    </div>
+    <div>
+        <input type="checkbox" id="chkTennis" value="tennis" class="chkGames" checked>
+        <label for="chkTennis">Tennis</label>
+    </div>
+    <div>
+        <input type="checkbox" id="chkBadminton" value="badminton" class="chkGames">
+        <label for="chkBadminton">Badminton</label>
+    </div>
+
+    <button onclick="process()">Process</button>
+
+    <div style="background-color: yellow;width:500px;border:5px solid red;height: 300px;" id="displaySelectedGames">
+
+    </div>
+
+    <script>
+
+        function process() {
+            let selectedGames = [];
+            const gamesCheckBoxes = document.getElementsByClassName("chkGames");
+            const elemSelectedGames = document.getElementById("displaySelectedGames");
+
+            console.log(gamesCheckBoxes)
+            console.log(gamesCheckBoxes.length)
+
+            for (let i = 0; i < gamesCheckBoxes.length; i = i + 1) {
+                console.log(gamesCheckBoxes[i].value, gamesCheckBoxes[i].checked)
+
+                if (gamesCheckBoxes[i].checked == true) {
+                    selectedGames.push(gamesCheckBoxes[i].value);
+                }
+            }
+
+            console.log(selectedGames);
+            
+
+            let strselectedGames = `<ul>`;
+            for (let j = 0; j < selectedGames.length; j = j + 1) {
+                strselectedGames = strselectedGames + `<li>${selectedGames[j]}</li>`;
+            }
+            strselectedGames = strselectedGames + `</ul>`;
+            elemSelectedGames.innerHTML = strselectedGames;
+
+
+        }
+
+    </script>
+</body>
+
+</html>

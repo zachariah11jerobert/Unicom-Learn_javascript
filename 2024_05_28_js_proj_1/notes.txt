@@ -1,0 +1,12 @@
+DOM - Document Object Model
+
+getElementById()
+innerHTML=
+innerText=
+document.createElement()
+appendChild()
+
+1. get subtotal by multipling qty with price
+2. define your products details in separare array and print it as table
+
+1.
