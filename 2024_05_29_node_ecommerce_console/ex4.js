@@ -9,7 +9,7 @@ while (str != "no") {
     let productPrice = Number(readlineSync.question('Enter Product Price : '));
 
     let productId = "P" + Math.floor(Math.random() * 100);
-    //
+    
     let product = {
         id: productId,
         name: productName,

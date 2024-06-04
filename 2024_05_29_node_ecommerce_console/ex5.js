@@ -16,14 +16,14 @@ const products = [{
     price: 120,
 }];
 
-let str = "";
-while (str != "no") {
+// let str = "";
+// while (str != "no") {
 
-    addProducts();
-    str = readlineSync.question('---------- Do you want to Continue  yes/no : ');
-}
+//     addProducts();
+//     str = readlineSync.question('---------- Do you want to Continue  yes/no : ');
+// }
 
-console.log(products)
+// console.log(products)
 
 function addProducts() {
     let productId = readlineSync.question('Enter Product ID : ');
@@ -49,3 +49,4 @@ function displayProducts() {
     console.log("------------------------------------------");
 }
 
+displayProducts();

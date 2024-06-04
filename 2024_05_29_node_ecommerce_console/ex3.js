@@ -8,7 +8,6 @@ while (str != "no") {
     let productName = readlineSync.question('Enter Product Name : ');
     let productPrice = Number(readlineSync.question('Enter Product Price : '));
 
-    //
     let product = {
         id: productId,
         name: productName,
